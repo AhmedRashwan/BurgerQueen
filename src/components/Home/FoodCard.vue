@@ -1,9 +1,8 @@
 <script setup>
 
-defineProps({
+const props = defineProps({
   foodCards: Array
 })
-
 </script>
 
 <template>

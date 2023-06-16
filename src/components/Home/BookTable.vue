@@ -1,3 +1,20 @@
+<script setup>
+import {ref} from "vue";
+
+const name = ref("")
+const phone = ref("")
+const email = ref("")
+const persons = ref("")
+const date = ref("")
+
+function bookTable(e) {
+  console.log(name.value)
+  console.log(phone.value)
+  console.log(email.value)
+  console.log(persons.value)
+  console.log(date.value)
+}
+</script>
 <template>
   <!-- book section -->
   <section class="book_section layout_padding">
@@ -10,37 +27,29 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form_container">
-            <form action="" @submit.prevent="">
+            <form action="" @submit.prevent="bookTable">
               <div>
-                <input class="form-control" placeholder="Your Name" type="text"/>
+                <input v-model="name" class="form-control" placeholder="Your Name" type="text"/>
               </div>
               <div>
-                <input class="form-control" placeholder="Phone Number" type="text"/>
+                <input v-model="phone" class="form-control" placeholder="Phone Number" type="text"/>
               </div>
               <div>
-                <input class="form-control" placeholder="Your Email" type="email"/>
+                <input v-model="email" class="form-control" placeholder="Your Email" type="email"/>
               </div>
               <div>
-                <select class="form-control nice-select wide">
+                <select v-model="persons" class="form-control nice-select wide">
                   <option disabled selected value="">
                     How many persons?
                   </option>
-                  <option value="">
-                    2
+                  <option v-for='num in [1,2,3,4,5]' :key="num" :value="num">
+                    {{ num }}
                   </option>
-                  <option value="">
-                    3
-                  </option>
-                  <option value="">
-                    4
-                  </option>
-                  <option value="">
-                    5
-                  </option>
+
                 </select>
               </div>
               <div>
-                <input class="form-control" type="date">
+                <input v-model="date" class="form-control" type="date">
               </div>
               <div class="btn_box">
                 <button>
@@ -61,11 +70,6 @@
   <!-- end book section -->
 </template>
 
-<script>
-export default {
-  name: "BookTable"
-}
-</script>
 
 <style scoped>
 

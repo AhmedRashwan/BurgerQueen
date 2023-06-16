@@ -2,7 +2,7 @@
 import {ref} from "vue"
 import FoodCard from "./FoodCard.vue";
 
-defineProps({
+let props = defineProps({
   sectionTitle: String,
   foodList: Array,
   foodCards: Array
@@ -12,6 +12,7 @@ let activeList = ref("all")
 function addToCart() {
   console.log("Added to cart")
 }
+
 </script>
 
 <template>
@@ -26,14 +27,14 @@ function addToCart() {
       </div>
 
       <ul class="filters_menu">
-        <li v-for="item in foodList" :class="{'active':item === activeList}"
+        <li v-for="item in props.foodList" :class="{'active':item === activeList}"
             data-filter="*" @click="activeList = item">{{ item }}
         </li>
       </ul>
 
       <div class="filters-content">
         <div class="row grid">
-          <FoodCard :food-cards="foodCards"/>
+          <FoodCard :food-cards="props.foodCards.filter((card)=>card.type === activeList || activeList === 'all')"/>
         </div>
       </div>
       <div class="btn-box">
