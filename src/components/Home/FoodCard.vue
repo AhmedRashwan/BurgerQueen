@@ -1,12 +1,12 @@
 <script setup>
 
 const props = defineProps({
-  foodCards: Array
+  foodItems: Array
 })
 </script>
 
 <template>
-  <div v-for="card in foodCards" :class="card.type" class="col-sm-6 col-lg-4 all ">
+  <div v-for="card in foodItems" :class="card.type" class="col-sm-6 col-lg-4 all ">
     <div class="box">
       <div>
         <div class="img-box">

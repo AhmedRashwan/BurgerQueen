@@ -1,9 +1,8 @@
 <script setup>
-defineProps({
-  contactLinks: Array,
-  socialLinks: Array,
-  workingHours: Array
-})
+
+import {useFooterStore} from "../../stores/FooterStore";
+
+const footer = useFooterStore();
 </script>
 <template>
   <footer class="footer_section">
@@ -16,7 +15,7 @@ defineProps({
             </h4>
             <div class="contact_link_box">
 
-              <a v-for="contact in contactLinks" :href="contact.link">
+              <a v-for="contact in footer.contactLinks" :href="contact.link">
                 <i :class="contact.icon" aria-hidden="true"></i>
                 <span>
                   {{ contact.name }} {{ contact.description }}
@@ -35,7 +34,7 @@ defineProps({
               in town.
             </p>
             <div class="footer_social">
-              <a v-for="social in socialLinks" :href="social.link">
+              <a v-for="social in footer.socialLinks" :href="social.link">
                 <i :class="social.icon" aria-hidden="true"></i>
               </a>
             </div>
@@ -45,8 +44,8 @@ defineProps({
           <h4>
             Opening Hours
           </h4>
-          <p v-for="workinghour in workingHours">
-            {{ workinghour.day }} {{ workinghour.from }} - {{ workinghour.to }}
+          <p v-for="workingHour in footer.workingHours">
+            {{ workingHour.day }} {{ workingHour.from }} - {{ workingHour.to }}
           </p>
         </div>
       </div>

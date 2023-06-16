@@ -1,18 +1,18 @@
 <script setup>
-import {ref} from "vue"
 import FoodCard from "./FoodCard.vue";
-
-let props = defineProps({
-  sectionTitle: String,
-  foodList: Array,
-  foodCards: Array
-})
-let activeList = ref("all")
+import {useFoodItemsStore} from "../../stores/FoodItemsStore";
 
 function addToCart() {
   console.log("Added to cart")
 }
 
+let foodItems = useFoodItemsStore();
+
+let about = {
+  title: "We Are Burger Queen",
+  description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All",
+  image: "/src/assets/images/about-img.png"
+}
 </script>
 
 <template>
@@ -21,20 +21,19 @@ function addToCart() {
   <section class="food_section layout_padding-bottom">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>
-          {{ sectionTitle }}
-        </h2>
+        <h2>our food</h2>
       </div>
 
       <ul class="filters_menu">
-        <li v-for="item in props.foodList" :class="{'active':item === activeList}"
-            data-filter="*" @click="activeList = item">{{ item }}
+        <li v-for="item in foodItems.foodList" :class="{'active':item === foodItems.activeItem}"
+            data-filter="*" @click="foodItems.activeItem = item">{{ item }}
         </li>
       </ul>
 
       <div class="filters-content">
         <div class="row grid">
-          <FoodCard :food-cards="props.foodCards.filter((card)=>card.type === activeList || activeList === 'all')"/>
+          <FoodCard
+              :food-items="foodItems.categorized"/>
         </div>
       </div>
       <div class="btn-box">
@@ -44,7 +43,6 @@ function addToCart() {
       </div>
     </div>
   </section>
-
   <!-- end food section -->
 </template>
 

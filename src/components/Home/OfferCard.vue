@@ -1,7 +1,7 @@
 <script setup>
-defineProps({
-  offers: Array
-})
+import {useOfferStore} from "../../stores/Offers";
+
+const offers = useOfferStore();
 </script>
 
 <template>
@@ -9,7 +9,7 @@ defineProps({
     <div class="offer_container">
       <div class="container ">
         <div class="row">
-          <div v-for="offer in offers" class="col-md-6">
+          <div v-for="offer in offers.getOffers()" class="col-md-6">
             <div class="box ">
               <div class="img-box">
                 <img :src="offer.image" alt="">
@@ -23,9 +23,9 @@ defineProps({
                 </h6>
                 <a :href="offer.link">
                   Order Now
-                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                       style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                  <svg id="Capa_1" style="enable-background:new 0 0 456.029 456.029;" version="1.1"
+                       viewBox="0 0 456.029 456.029" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
                     <g>
                       <g>
                         <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
