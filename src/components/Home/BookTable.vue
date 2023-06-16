@@ -8,11 +8,7 @@ const persons = ref("")
 const date = ref("")
 
 function bookTable(e) {
-  console.log(name.value)
-  console.log(phone.value)
-  console.log(email.value)
-  console.log(persons.value)
-  console.log(date.value)
+  console.log("Table booked");
 }
 </script>
 <template>
