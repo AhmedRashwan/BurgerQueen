@@ -17,7 +17,7 @@
                     nihil ducimus libero ipsam.
                   </p>
                   <div class="btn-box">
-                    <RouterLink to="" href="" class="btn1">
+                    <RouterLink class="btn1" href="" to="">
                       Order Now
                     </RouterLink>
                   </div>
@@ -40,7 +40,7 @@
                     nihil ducimus libero ipsam.
                   </p>
                   <div class="btn-box">
-                    <RouterLink to="" href="" class="btn1">
+                    <RouterLink class="btn1" href="" to="">
                       Order Now
                     </RouterLink>
                   </div>
@@ -63,7 +63,7 @@
                     nihil ducimus libero ipsam.
                   </p>
                   <div class="btn-box">
-                    <RouterLink to="" href="" class="btn1">
+                    <RouterLink class="btn1" href="" to="">
                       Order Now
                     </RouterLink>
                   </div>
@@ -75,9 +75,9 @@
       </div>
       <div class="container">
         <ol class="carousel-indicators">
-          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-          <li data-target="#customCarousel1" data-slide-to="1"></li>
-          <li data-target="#customCarousel1" data-slide-to="2"></li>
+          <li class="active" data-slide-to="0" data-target="#customCarousel1"></li>
+          <li data-slide-to="1" data-target="#customCarousel1"></li>
+          <li data-slide-to="2" data-target="#customCarousel1"></li>
         </ol>
       </div>
     </div>

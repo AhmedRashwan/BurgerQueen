@@ -10,15 +10,17 @@
         </RouterLink>
 
 
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
                 data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
           <span class=""> </span>
         </button>
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav  mx-auto ">
-            <li class="nav-item active">
-              <RouterLink class="nav-link" to="/">Home <span class="sr-only">(current)</span></RouterLink>
+            <li class="nav-item">
+              <RouterLink active-class="active" class="nav-link" to="home">Home <span class="sr-only">(current)</span>
+              </RouterLink>
             </li>
             <li class="nav-item">
               <RouterLink class="nav-link" to="menu">Menu</RouterLink>
@@ -27,7 +29,7 @@
               <RouterLink class="nav-link" to="about">About</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="bookTable">Book Table</RouterLink>
+              <RouterLink class="nav-link" to="book-table">Book Table</RouterLink>
             </li>
           </ul>
           <div class="user_option">
@@ -105,3 +107,8 @@
   </header>
   <!-- end header section -->
 </template>
+<style scoped>
+.header_section {
+  background-image: url("../assets/images/hero-bg.jpg");
+}
+</style>
