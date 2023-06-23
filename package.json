@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "deploy-demo": "git push origin :gh-pages && git add dist && git commit -m \"deploy github pages\" && git subtree push --prefix dist origin gh-pages"
+    "deploy:gh": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "pinia": "^2.0.36",
