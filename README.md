@@ -1,6 +1,8 @@
-# BurgerQueen
+# [BurgerQueen](https://ahmedrashwan.github.io/BurgerQueen/)
 
 This template should help get you started developing with Vue 3 in Vite.
+
+#
 
 ## Recommended IDE Setup
 
@@ -32,4 +34,10 @@ npm run build
 
 ```sh
 npm run lint
+```
+
+### Deploy to gh-pages
+
+```sh
+npm run deploy:gh
 ```
