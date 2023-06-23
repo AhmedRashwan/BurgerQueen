@@ -52,7 +52,7 @@ const footer = useFooterStore();
       <div class="footer-info">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="" target="_blank">Ahmed Rashwan</a>
+          <a href="https://github.com/AhmedRashwan" target="_blank">Ahmed Rashwan</a>
 
         </p>
       </div>

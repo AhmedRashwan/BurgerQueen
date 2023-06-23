@@ -19,7 +19,7 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav  mx-auto ">
             <li class="nav-item">
-              <RouterLink active-class="active" class="nav-link" to="home">Home <span class="sr-only">(current)</span>
+              <RouterLink active-class="active" class="nav-link" to="/">Home <span class="sr-only">(current)</span>
               </RouterLink>
             </li>
             <li class="nav-item">

@@ -1,15 +1,6 @@
-// to get current year
-function getYear() {
-    var currentDate = new Date();
-    var currentYear = currentDate.getFullYear();
-    document.querySelector("#displayYear").innerHTML = currentYear;
-}
-
-getYear();
-
-
 // isotope js
 $(window).on('load', function () {
+    $("#displayYear").text(new Date().getFullYear());
     $('.filters_menu li').click(function () {
         $('.filters_menu li').removeClass('active');
         $(this).addClass('active');
@@ -30,9 +21,9 @@ $(window).on('load', function () {
 });
 
 // nice select
-$(document).ready(function() {
+$(document).ready(function () {
     $('select').niceSelect();
-  });
+});
 
 /** google_map js **/
 function myMap() {

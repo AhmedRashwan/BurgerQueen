@@ -1,8 +1,18 @@
-<template>
-  <!-- about section -->
+<script setup>
+import {reactive} from "vue";
+import aboutImage from "@/assets/images/about-img.png";
 
+let about = reactive({
+  title: "About Us",
+  description: "This restaurant is a place where you can enjoy your meal with your family and friends. We have a wide range of dishes to choose from. We also have a bar where you can enjoy your favorite drinks. We have a wide range of dishes to choose from. We also have a bar where you can enjoy your favorite drinks.",
+  image: aboutImage
+});
+</script>
+<template>
+
+  <!-- about section -->
   <section class="about_section layout_padding">
-    <div class="container  ">
+    <div class="container ">
 
       <div class="row">
         <div class="col-md-6 ">
@@ -28,15 +38,10 @@
       </div>
     </div>
   </section>
-
+  <p style="text-align: center">Made by Love, ½ teaspoon ground black pepper and 1 pound ground beef</p>
   <!-- end about section -->
 </template>
 
-<script setup>
-defineProps({
-  about: Object
-})
-</script>
 
 <style scoped>
 

@@ -18,10 +18,10 @@ let about = {
 <template>
   <!-- food section -->
 
-  <section class="food_section layout_padding-bottom">
+  <section class="food_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>our food</h2>
+        <h2>Our Menu</h2>
       </div>
 
       <ul class="filters_menu">
